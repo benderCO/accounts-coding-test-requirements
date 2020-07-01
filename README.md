@@ -1,35 +1,15 @@
 # Accounts Coding Challenge
 
-## Backend Repository
+## How To Test
 
-> [https://github.com/frontier-airlines/accounts-coding-test-backend](https://github.com/frontier-airlines/accounts-coding-test-backend)
+* Checkout repository locally
+* Navigate to the frontier folder
+* npm run install
+* npm run start (ng serve)
 
-## Instructions
+# Improvements working on
 
-- Read requirement documents provided.
-- Create a simple solution that satisfies acceptance criteria.
-- Use either Vue.js, angular(v2+), react or .NET core to complete this challenge.
-  - [Vue Docs](https://vuejs.org/)
-  - [Microsoft Docs](https://docs.microsoft.com/en-us/aspnet/core)
-  - [Angular.io](https://angular.io/docs)
-  - [React.js](https://reactjs.org/docs/getting-started.html)
-
-## Pointers
-
-- Comments explaining design decisions are encouraged, but not required.
-- These exercises are meant to take 1-2 hours. A fully architected enterprise solution is not expected, but adding //TODO's and additional comments explaining ways your code could be expanded into a production ready solution is also encouraged.
-- Develop the solution in the framework you are most comfortable with. We limit the framework selection so that solutions can be evaluated with equal weight, regardless of tools used.  
-
-## File Structure
-
-- accounts-coding-test-requirements
-  - api-documentation.md - contains information on REST endpoint where data can be retrieved
-  - README.md - contains overall instruction
-  - template.html - contains front end template to display data
-  - user-story.md - contains business requirements and acceptance criteria
-
-## Submissions
-
-- Submissions should be hosted in a public git repository.
-- Send a url for the solution's git repo to the recruiter you have been in contact with.
-- Your recruiter will be in touch with next steps.
+* Create a node application
+  * Utilize Mongo DB with a preload of currently provided users
+  * Add all actions, ant a single get
+* Modify current angular application to easily switch between the two off of build commands

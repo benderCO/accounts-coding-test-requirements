@@ -9,8 +9,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'frontier';
-
   public accounts: Observable<any>;
 
   public activeAccounts: [] = [];

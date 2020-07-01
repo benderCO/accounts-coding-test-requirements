@@ -51,17 +51,22 @@ footer {
   grid-row-start: 3;
 }
 .account-column {
-  grid-template-rows: 2em repeat(2, 10em);
+  grid-template-rows: 2em repeat(3, 10em);
 }
 .content-title-container {
   justify-self: center;
   height: 1em;
   grid-row-start: 2;
 }
+#active-account-container-title > h3{
+  display: table-header-group;
+}
 #overdue-account-container-title > h3{
+  display: table-header-group;
   color: #B22222;
 }
-#inactive-account-container-title > h3 {
+#inactive-account-container-title > h3{
+  display: table-header-group;
   color:#808080;
 }
 .account-container {
