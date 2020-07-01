@@ -4,11 +4,6 @@
   </head>
   <body>
     <section class="grid">
-      <header class="grid">
-        <div class="title-container">
-          <h1>Coding Test</h1>
-        </div>
-      </header>
       <main class="content grid" id="home-content">
         <div class="content-title-container">
           <h2>Accounts</h2>
@@ -18,13 +13,13 @@
             <div class="account-container-title" id="active-account-container-title">
               <h3>Active</h3>
             </div>
-            <div class="account-container active-account">
+            <div *ngFor="let account of activeAccounts" class="account-container active-account">
               <ul class="account-data-list">
-                <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                <li><label>Email:</label>{{Email}}</li>
-                <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{AmountDue}}</li>
-                <li><label>Due Date:</label>{{DueDate}}</li> -->
+                <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                <li><label>Email:</label>{{account.Email}}</li>
+                <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
               </ul>
             </div>     
           </section>
@@ -32,13 +27,13 @@
             <div class="account-container-title" id="overdue-account-container-title">
               <h3>Overdue</h3>
             </div>
-            <div class="account-container overdue-account">
+            <div *ngFor="let account of overdueAccounts" class="account-container overdue-account">
               <ul class="account-data-list">
-                <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                <li><label>Email:</label>{{Email}}</li>
-                <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{AmountDue}}</li>
-                <li><label>Due Date:</label>{{DueDate}}</li> -->
+                <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                <li><label>Email:</label>{{account.Email}}</li>
+                <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
               </ul>
             </div>
           </section>
@@ -46,21 +41,21 @@
             <div class="account-container-title" id="inactive-account-container-title">
               <h3>Inactive</h3>
             </div>
-            <div class="account-container inactive-account">
+            <div *ngFor="let account of inactiveAccounts" class="account-container inactive-account">
               <ul class="account-data-list">
-                <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                <li><label>Email:</label>{{Email}}</li>
-                <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{AmountDue}}</li>
-                <li><label>Due Date:</label>{{DueDate}}</li> -->
+                <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                <li><label>Email:</label>{{account.Email}}</li>
+                <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
               </ul>
             </div>
           </div>
         </section>
       </main>
-      <footer class="grid">
-        <p class="copy">&copy;<script>document.write(new Date().getFullYear())</script></p>
-      </footer>
     </section>
   </body>
+  <footer class="grid">
+    <p class="copy">&copy;<script>document.write(new Date().getFullYear())</script></p>
+  </footer>
 </html>

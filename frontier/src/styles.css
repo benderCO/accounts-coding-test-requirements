@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+header {
+  grid-area: header;
+  background-color:#006643;
+  color: #fff;
+  grid-template-columns: 1% 98% 1%;
+}

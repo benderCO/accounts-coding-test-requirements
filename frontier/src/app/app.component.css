@@ -12,12 +12,6 @@ article {
       "footer";
   grid-template-rows: 100px 1fr 150px;
 }
-header {
-  grid-area: header;
-  background-color:#006643;
-  color: #fff;
-  grid-template-columns: 1% 98% 1%;
-}
 h1 {
   font-size: 3em;
   font-weight: bold;
