@@ -23,8 +23,8 @@ export class AppComponent {
       tap((resp: []) => {
         console.log('Responses are: ', resp);
         this.activeAccounts = resp.filter((item: any) => item.AccountStatusId === 0) as any;
-        this.overdueAccounts = resp.filter((item: any) => item.AccountStatusId === 1) as any;
-        this.inactiveAccounts = resp.filter((item: any) => item.AccountStatusId === 2) as any;
+        this.overdueAccounts = resp.filter((item: any) => item.AccountStatusId === 2) as any;
+        this.inactiveAccounts = resp.filter((item: any) => item.AccountStatusId === 1) as any;
       })
     ).subscribe();
   }

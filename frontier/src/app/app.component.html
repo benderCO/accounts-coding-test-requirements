@@ -17,9 +17,9 @@
               <ul class="account-data-list">
                 <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                 <li><label>Email:</label>{{account.Email}}</li>
-                <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
-                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
+                <li><label>Phone Number:</label>{{account.PhoneNumber | phone}}</li>
+                <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
+                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>     
           </section>
@@ -32,8 +32,8 @@
                 <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                 <li><label>Email:</label>{{account.Email}}</li>
                 <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
-                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
+                <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
+                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>
           </section>
@@ -46,8 +46,8 @@
                 <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                 <li><label>Email:</label>{{account.Email}}</li>
                 <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
-                <li><label>Amount Due:</label>{{account.AmountDue}}</li>
-                <li><label>Due Date:</label>{{account.DueDate}}</li> -->
+                <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
+                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>
           </div>
