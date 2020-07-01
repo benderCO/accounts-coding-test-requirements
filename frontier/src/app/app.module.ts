@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PhonePipe } from 'src/pipes/PhonePipe'
+import { PhonePipe } from 'src/pipes/phone.pipe.'
 import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
