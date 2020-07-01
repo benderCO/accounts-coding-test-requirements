@@ -1,9 +1,11 @@
 <html>
-  <head>
-    <title>Accounts Coding Test</title>
-  </head>
   <body>
-    <section class="grid">
+    <section>
+      <head>
+        <title>Accounts Coding Test</title>
+      </head>
+    </section>
+    <section class="grid" *ngIf='accounts | async'>
       <main class="content grid" id="home-content">
         <div class="content-title-container">
           <h2>Accounts</h2>
@@ -19,7 +21,7 @@
                 <li><label>Email:</label>{{account.Email}}</li>
                 <li><label>Phone Number:</label>{{account.PhoneNumber | phone}}</li>
                 <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
-                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
+                <li *ngIf='account.PaymentDueDate'><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>     
           </section>
@@ -33,7 +35,7 @@
                 <li><label>Email:</label>{{account.Email}}</li>
                 <li><label>Phone Number:</label>{{account.PhoneNumber | phone}}</li>
                 <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
-                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
+                <li *ngIf='account.PaymentDueDate'><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>
           </section>
@@ -47,15 +49,17 @@
                 <li><label>Email:</label>{{account.Email}}</li>
                 <li><label>Phone Number:</label>{{account.PhoneNumber | phone}}</li>
                 <li><label>Amount Due:</label>{{account.AmountDue | currency:'USD':'symbol-narrow'}}</li>
-                <li><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
+                <li *ngIf='account.PaymentDueDate'><label>Due Date:</label>{{account.PaymentDueDate | date:'d/M/y'}}</li>
               </ul>
             </div>
           </div>
         </section>
       </main>
     </section>
+    <section>
+      <footer class="grid">
+        <p class="copy">&copy; 2020</p>
+      </footer>
+    </section>
   </body>
-  <footer class="grid">
-    <p class="copy">&copy; 2020</p>
-  </footer>
 </html>

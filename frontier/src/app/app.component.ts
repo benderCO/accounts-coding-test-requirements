@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountsServiceService } from 'src/services/accounts-service.service';
 import { tap } from 'rxjs/operators'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { tap } from 'rxjs/operators'
 })
 export class AppComponent {
   public title = 'frontier';
+
+  public accounts: Observable<any>;
+
   public activeAccounts: [] = [];
   public overdueAccounts: [] = [];
   public inactiveAccounts: [] = [];
@@ -18,14 +22,12 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
-    console.log('HEY LISTEN');
-    this.accountsServiceService.loadAllAccounts().pipe(
+    this.accounts = this.accountsServiceService.loadAllAccounts().pipe(
       tap((resp: []) => {
-        console.log('Responses are: ', resp);
         this.activeAccounts = resp.filter((item: any) => item.AccountStatusId === 0) as any;
         this.overdueAccounts = resp.filter((item: any) => item.AccountStatusId === 2) as any;
         this.inactiveAccounts = resp.filter((item: any) => item.AccountStatusId === 1) as any;
       })
-    ).subscribe();
+    );
   }
 }
