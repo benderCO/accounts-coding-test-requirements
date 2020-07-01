@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PhonePipe } from 'src/pipes/PhonePipe'
 import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
